@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Tarea 14</title>
+  </head>
+  <body>
+    <div ng-app="MyApp" ng-controller="formCtrl">
+      <form action="">
+        <label>Codigo: </label>
+        <input type="text" ng-model="code" placeholder="Cual es tu codigo" />
 
+        <label>Nombre: </label>
+        <input type="text" ng-model="nombre" placeholder="Cual es tu codigo" />
+
+        <label>Horas Trabajadas: </label>
+        <input
+          type="number"
+          ng-model="horasT"
+          placeholder="Cuantas horas trabajas"
+        />
+
+        <label>Tarifa Hora: </label>
+        <input
+          type="number"
+          ng-model="tariH"
+          placeholder="Cuanto ganas por Hora"
+        />
+      </form>
+
+      <h3>Imprimiendo sueldo del Empleado - Indra</h3>
+      <p>Codigo: {{code}}</p>
+      <p>Nombre: {{nombre}}</p>
+      <p>Horas: {{horasT}}</p>
+      <p>Tarifa: {{tariH}}</p>
+      <p>Saldo: {{totalidad(horasT, tariH)}}</p>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
